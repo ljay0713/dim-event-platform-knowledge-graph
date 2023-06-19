@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+}
+
+plugins {
+	id 'java-application-configuration-plugin'
+}
+
+jar {
+	destinationDirectory.set(file("${project.buildDir}/target"))
+}
+
+dependencies {
+	implementation project(":confluent-cloud-client")
+	implementation 'org.springframework.boot:spring-boot-starter-graphql'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'javax.xml.bind:jaxb-api:2.3.0'
+
+	testImplementation 'org.springframework:spring-webflux'
+	testImplementation 'org.springframework.graphql:spring-graphql-test'
+}

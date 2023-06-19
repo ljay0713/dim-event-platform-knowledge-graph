@@ -1,0 +1,33 @@
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+
+confluent:
+  cloud:
+    credentials:
+      prod-us-east-1:
+        api-key: ${CONFLUENT_CLOUD_PROD_US_EAST_1_API_KEY}
+        api-secret: ${CONFLUENT_CLOUD_PROD_US_EAST_1_API_SECRET}
+        cluster-id: ${CONFLUENT_CLOUD_PROD_US_EAST_1_CLUSTER_ID}
+        api-endpoint: ${CONFLUENT_CLOUD_PROD_US_EAST_1_API_ENDPOINT}
+      prod-us-east-2:
+        api-key: ${CONFLUENT_CLOUD_PROD_US_EAST_2_API_KEY}
+        api-secret: ${CONFLUENT_CLOUD_PROD_US_EAST_2_API_SECRET}
+        cluster-id: ${CONFLUENT_CLOUD_PROD_US_EAST_2_CLUSTER_ID}
+        api-endpoint: ${CONFLUENT_CLOUD_PROD_US_EAST_2_API_ENDPOINT}
+      stag-us-east-1:
+        api-key: ${CONFLUENT_CLOUD_STAG_US_EAST_1_API_KEY}
+        api-secret: ${CONFLUENT_CLOUD_STAG_US_EAST_1_API_SECRET}
+        cluster-id: ${CONFLUENT_CLOUD_STAG_US_EAST_1_CLUSTER_ID}
+        api-endpoint: ${CONFLUENT_CLOUD_STAG_US_EAST_1_API_ENDPOINT}
+      stag-us-east-2:
+        api-key: ${CONFLUENT_CLOUD_STAG_US_EAST_2_API_KEY}
+        api-secret: ${CONFLUENT_CLOUD_STAG_US_EAST_2_API_SECRET}
+        cluster-id: ${CONFLUENT_CLOUD_STAG_US_EAST_2_CLUSTER_ID}
+        api-endpoint: ${CONFLUENT_CLOUD_STAG_US_EAST_2_API_ENDPOINT}
+      sbx:
+        api-key: ${CONFLUENT_CLOUD_SBX_API_KEY:H3OC3KJDFDFQS2T7}
+        api-secret: ${CONFLUENT_CLOUD_SBX_API_SECRET:rWFm6XrTANi5x42bP58LuoGP+YyQDHE3g9ZdvdMxrbxUVYMNB2BKBqaJXVWp8NKA}
+        cluster-id: ${CONFLUENT_CLOUD_SBX_CLUSTER_ID:lkc-dnvvy}
+        api-endpoint: ${CONFLUENT_CLOUD_SBX_API_ENDPOINT:https://lkc-dnvvy-ldvqz.us-east-1.aws.glb.confluent.cloud}

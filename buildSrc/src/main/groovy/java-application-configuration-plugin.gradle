@@ -1,0 +1,42 @@
+plugins {
+    id 'java-library-configuration-plugin'
+    id 'application'
+}
+
+application {
+    applicationDefaultJvmArgs = ["-Dspring.config.location=\$APP_HOME/resources/", "-Dloader.path=\$APP_HOME/resources/"]
+}
+
+def File scriptLocation
+
+bootJar {
+    exclude { FileTreeElement el -> el.file.getName().endsWith(".properties") }
+    layered {
+        enabled = true
+        includeLayerTools = true
+    }
+    manifest {
+        attributes 'Main-Class': 'org.springframework.boot.loader.PropertiesLauncher'
+    }
+}
+
+//bootStartScripts {
+//    scriptLocation = getUnixScript()
+//}
+//
+//task updateUnixScript(type:Exec) {
+//    dependsOn(bootStartScripts)
+//    //on linux
+//    commandLine './updateScript.sh', scriptLocation.path
+//}
+//
+//bootDistTar {
+//    dependsOn(updateUnixScript)
+//    into(archiveBaseName.get() + "/resources") {
+//        from('src/main/resources')
+//    }
+//}
+
+test {
+    useJUnitPlatform()
+}

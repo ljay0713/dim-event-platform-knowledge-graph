@@ -1,0 +1,4 @@
+rootProject.name = 'dim-event-platform-knowledge-graph'
+
+include 'confluent-cloud-client'
+include 'knowledge-graph-core'

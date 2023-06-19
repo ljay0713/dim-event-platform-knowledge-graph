@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library-configuration-plugin'
+}
+
+group 'com.sysco.event.platform.bulk.data.common.consumer'
+version '0.0.1'
+
+jar {
+    destinationDirectory.set(file("${project.buildDir}/target"))
+    enabled = true
+}
+
+bootJar.enabled = false
+
+
+dependencies {
+    api "org.springframework.boot:spring-boot-starter"
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+}
+

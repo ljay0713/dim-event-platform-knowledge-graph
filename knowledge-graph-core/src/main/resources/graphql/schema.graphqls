@@ -1,0 +1,14 @@
+type Query {
+    getTopicsForServiceAccount(serviceAccountID: String!, confluentEnvironment: String!): AggregatedTopics
+    getServiceAccountsForTopic(topicName: String!, confluentEnvironment: String!): AggregatedServiceAccounts
+}
+
+type AggregatedTopics {
+    consumed: [String]
+    produced: [String]
+}
+
+type AggregatedServiceAccounts {
+    consumers: [String]
+    producers: [String]
+}
